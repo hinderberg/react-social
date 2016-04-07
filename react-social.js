@@ -152,6 +152,7 @@
       , url: React.PropTypes.string
       , media: React.PropTypes.string
       , message: React.PropTypes.string
+      , subject: React.PropTypes.string
       , onClick: React.PropTypes.func
     }
 
@@ -167,6 +168,7 @@
         , url: location
         , media: ""
         , message: ""
+        , subject: ""
         , onClick: function () { }
       };
     }
@@ -268,9 +270,12 @@
     mixins: [Button]
 
     , constructUrl: function () {
+        var msg = this.props.message === "" ?
+          this.props.url : this.props.message + " " + this.props.url;
+
       return [
-        "mailto:?subject=" + encodeURIComponent(this.props.message)
-             + "&body=" + encodeURIComponent(this.props.url),
+        "mailto:?subject=" + encodeURIComponent(this.props.subject)
+             + "&body=" + encodeURIComponent(msg),
         "_self"
       ]
     }
