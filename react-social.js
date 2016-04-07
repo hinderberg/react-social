@@ -246,6 +246,13 @@
   exports.FacebookButton = React.createClass({
     mixins: [Button]
 
+    , propTypes: {
+      appId: React.PropTypes.oneOfType([
+        React.PropTypes.string,
+        React.PropTypes.number
+      ])
+    }
+
     , constructUrl: function () {
       var appId = (this.props.appId || '145634995501895');
       return "https://www.facebook.com/dialog/feed?"
