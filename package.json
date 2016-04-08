@@ -4,7 +4,7 @@
   "description": "React social buttons, Facebook, Twitter and Pinterest",
   "main": "react-social.js",
   "peerDependencies": {
-    "react": ">=0.14.0"
+      "react": "~0.13.x || ~0.14.x || ^15.0.0-rc || ^15.0.0"
   },
   "devDependencies": {
     "beefy": "~2.1.1",
