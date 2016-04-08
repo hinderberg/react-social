@@ -1,12 +1,12 @@
 ;(function (root, factory) {
   if (typeof module !== "undefined" && module.exports) {
-    module.exports = factory(require("react"));
+    module.exports = factory(require("react"), require("lodash"));
   } else if (typeof define === "function" && define.amd) {
-    define(["react"], factory);
+    define(["react", "lodash"], factory);
   } else {
-    root.ReactSocial = factory(root.React);
+    root.ReactSocial = factory(root.React, root._);
   }
-})(this, function (React) {
+})(this, function (React, _) {
   "use strict";
 
   var isBrowser = function () {
@@ -14,7 +14,7 @@
   };
 
   var spread = function (obj, omit) {
-    var clone = React.__spread({}, obj);
+    var clone = _.assign({}, obj);
 
     omit.forEach(function (key) {
       delete clone[key];

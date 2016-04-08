@@ -4,11 +4,11 @@
   "description": "React social buttons, Facebook, Twitter and Pinterest",
   "main": "react-social.js",
   "peerDependencies": {
-    "react": ">=0.13.0"
+    "react": ">=0.14.0"
   },
   "devDependencies": {
-    "beefy": "~2.1.1"
-    , "browserify": "~8.1.1"
+    "beefy": "~2.1.1",
+    "browserify": "~8.1.1"
   },
   "scripts": {
     "dev": "beefy dev.js --live"
@@ -28,11 +28,13 @@
     "react-component"
   ],
   "author": "Ola Holmström",
-  "contributors": [
-  ],
+  "contributors": [],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/olahol/react-social/issues"
   },
-  "homepage": "https://github.com/olahol/react-social"
+  "homepage": "https://github.com/olahol/react-social",
+  "dependencies": {
+    "lodash": "^4.8.2"
+  }
 }
