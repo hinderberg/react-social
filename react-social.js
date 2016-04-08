@@ -195,7 +195,7 @@
 
       return React.createElement(
         this.props.element
-        , React.__spread({ "onClick": this.click }, other)
+        , _.assign({ "onClick": this.click }, other)
       );
     }
   };
