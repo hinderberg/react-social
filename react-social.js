@@ -255,10 +255,10 @@
 
     , constructUrl: function () {
       var appId = (this.props.appId || '145634995501895');
-      return "https://www.facebook.com/dialog/feed?"
+      return "https://www.facebook.com/dialog/share?"
              + "app_id=" + appId
              + "&display=popup&caption=" + encodeURIComponent(this.props.message)
-             + "&link=" + encodeURIComponent(this.props.url)
+             + "&href=" + encodeURIComponent(this.props.url)
              + "&redirect_uri=" + encodeURIComponent("https://www.facebook.com/")
     }
   });
